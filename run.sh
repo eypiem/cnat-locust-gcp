@@ -1,3 +1,5 @@
+#!/bin/bash
+
 LOCUST="/usr/local/bin/locust"
 LOCUS_OPTS="-f /app/locustfile.py --host=$TARGET_HOST"
 LOCUST_MODE=${LOCUST_MODE:-standalone}
