@@ -1,4 +1,4 @@
-from locust import FastHttpUser, constant_pacing, task
+from locust import FastHttpUser, constant_throughput, task
 import datetime
 from random import randrange, choice
 import uuid
@@ -8,7 +8,7 @@ tracker_jwts = []
 
 class CnatUser(FastHttpUser):
     weight = 1
-    wait_time =  constant_pacing(10)
+    wait_time =  constant_throughput((1/20)*100)
     email = None
     password = "password"
     jwt = None
@@ -88,7 +88,7 @@ class CnatUser(FastHttpUser):
 
 class CnatTracker(FastHttpUser):
     weight = 100
-    wait_time =  constant_pacing(20*60)
+    wait_time =  constant_throughput((1/(20*60))*100)
 
     @task(1)
     def registerTrackerData(self):
