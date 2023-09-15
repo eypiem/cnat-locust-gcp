@@ -13,5 +13,4 @@ RUN chmod 755 run.sh
 
 EXPOSE 5557 5558 8089
 
-# Start Locust using LOCUS_OPTS environment variable
 ENTRYPOINT ["/app/run.sh"]
