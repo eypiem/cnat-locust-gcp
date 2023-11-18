@@ -21,8 +21,8 @@ class CnatUser(FastHttpUser):
     # the user initialized with the following steps:
     # - Generates a new email address.
     # - Registers a new user.
-    # - Authentucated the user to get a user JWT.
-    # - Regsters a new tracker.
+    # - Authenticated the user to get a user JWT.
+    # - Registers a new tracker.
     def on_start(self):
         self.email = str(uuid.uuid4()) + "@test.com"
         

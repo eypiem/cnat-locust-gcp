@@ -1,3 +1,4 @@
+# The source of this file is:
 # https://github.com/GoogleCloudPlatform/distributed-load-testing-using-kubernetes/blob/master/kubernetes-config/locust-worker-controller.yaml.tpl
 
 # Copyright 2022 Google Inc. All rights reserved.
